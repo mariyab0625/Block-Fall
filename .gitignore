@@ -6,3 +6,4 @@ server/data/
 .DS_Store
 Thumbs.db
 BLOCKFALL_ARCHITECTURE.md
+.vscode/
