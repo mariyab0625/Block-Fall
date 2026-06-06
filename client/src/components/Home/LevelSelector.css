@@ -1,0 +1,104 @@
+.level-selector {
+  max-width: 480px;
+  width: 95%;
+}
+
+.level-selector__title {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--neon-cyan);
+  text-align: center;
+  text-shadow: 0 0 10px var(--neon-cyan);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.level-selector__divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  margin-bottom: 20px;
+}
+
+.level-selector__grid {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.level-btn {
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(0, 245, 255, 0.3);
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.level-btn:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 12px rgba(0,245,255,0.4);
+}
+
+.level-btn--active {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 245, 255, 0.12);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 16px rgba(0,245,255,0.5);
+}
+
+.level-info {
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: rgba(0,0,0,0.3);
+}
+
+.level-info__header {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+
+.level-info__row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.level-info__row span:last-child { color: #fff; }
+
+.level-info__bar-track {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.level-info__bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.level-selector__note {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  margin-bottom: 12px;
+}

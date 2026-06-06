@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0d0d1a;
+  --bg-card: #111122;
+  --neon-cyan: #00f5ff;
+  --neon-magenta: #ff00aa;
+  --neon-yellow: #f5e642;
+  --neon-green: #39ff14;
+  --neon-purple: #bf5fff;
+  --neon-orange: #ff8800;
+  --neon-red: #ff4d4d;
+  --neon-blue: #0066ff;
+  --grid-line: rgba(0, 245, 255, 0.08);
+  --border-dim: rgba(0, 245, 255, 0.2);
+  --glow-sm: 0 0 8px currentColor;
+  --glow-md: 0 0 20px currentColor, 0 0 40px currentColor;
+  --glow-lg: 0 0 40px currentColor, 0 0 80px currentColor, 0 0 120px currentColor;
+  --font-display: 'Press Start 2P', monospace;
+  --font-body: 'Orbitron', sans-serif;
+  --font-ui: 'Rajdhani', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #ffffff;
+  font-family: var(--font-ui);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;        /* base up from browser default 16px */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--neon-cyan); border-radius: 3px; }
+
+/* Utility */
+.text-cyan    { color: var(--neon-cyan); }
+.text-magenta { color: var(--neon-magenta); }
+.text-yellow  { color: var(--neon-yellow); }
+.text-green   { color: var(--neon-green); }
+.text-purple  { color: var(--neon-purple); }
+
+.glow-cyan    { text-shadow: 0 0 10px var(--neon-cyan), 0 0 30px var(--neon-cyan); }
+.glow-magenta { text-shadow: 0 0 10px var(--neon-magenta), 0 0 30px var(--neon-magenta); }
