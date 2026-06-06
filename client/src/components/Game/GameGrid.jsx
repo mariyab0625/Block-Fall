@@ -24,6 +24,8 @@ export default function GameGrid({ state, ghostY }) {
 
   /* Build display grid: locked + ghost + active */
   const displayGrid = useMemo(() => {
+    // Guard: if grid isn't ready yet, return empty flat array
+    if (!Array.isArray(grid) || grid.length === 0) return [];
     const flat = grid.map(row => row.map(cell => (cell ? { ...cell } : null)));
 
     // Ghost

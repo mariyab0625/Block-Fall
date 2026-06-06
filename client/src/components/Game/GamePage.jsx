@@ -88,7 +88,7 @@ export default function GamePage() {
 
           {/* Corner +10 animations on row clear */}
           <AnimatePresence>
-            {(state.scoreEvents || [])
+            {(state.scoreEvents ?? [])
               .filter(ev => ev.type === 'row')
               .flatMap(ev =>
                 CORNERS.map((corner, ci) => (

@@ -22,7 +22,10 @@ export default function Leaderboard() {
 
   useEffect(() => {
     getLeaderboard()
-      .then(res => setEntries(res.data))
+      .then(res => {
+        // Guard: only update if the response is actually an array
+        if (Array.isArray(res.data)) setEntries(res.data);
+      })
       .catch(() => {}); // silently fall back to dummy
   }, []);
 
